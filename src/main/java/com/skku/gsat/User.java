@@ -21,6 +21,8 @@ public class User {
     private String userID;
     @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
+    private Long point = 0L;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "user_id")
     private List<Exam> userExams = new ArrayList<>();
